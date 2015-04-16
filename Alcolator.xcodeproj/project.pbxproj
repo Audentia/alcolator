@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C326BAD81AE04F69001DCD31 /* BLCMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C326BAD71AE04F69001DCD31 /* BLCMainMenuViewController.m */; };
 		C33A96721ADDCA5B006CD105 /* BLCWhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33A96711ADDCA5B006CD105 /* BLCWhiskeyViewController.m */; };
 		C3F9EA3F1AAE8F4F0072ACEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F9EA3E1AAE8F4F0072ACEC /* main.m */; };
 		C3F9EA421AAE8F4F0072ACEC /* BLCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F9EA411AAE8F4F0072ACEC /* BLCAppDelegate.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C326BAD61AE04F69001DCD31 /* BLCMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCMainMenuViewController.h; sourceTree = "<group>"; };
+		C326BAD71AE04F69001DCD31 /* BLCMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCMainMenuViewController.m; sourceTree = "<group>"; };
 		C33A96701ADDCA5B006CD105 /* BLCWhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCWhiskeyViewController.h; path = ../BLCWhiskeyViewController.h; sourceTree = "<group>"; };
 		C33A96711ADDCA5B006CD105 /* BLCWhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCWhiskeyViewController.m; path = ../BLCWhiskeyViewController.m; sourceTree = "<group>"; };
 		C3F9EA391AAE8F4F0072ACEC /* Alcolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +89,8 @@
 				C3F9EA411AAE8F4F0072ACEC /* BLCAppDelegate.m */,
 				C3F9EA431AAE8F4F0072ACEC /* BLCViewController.h */,
 				C3F9EA441AAE8F4F0072ACEC /* BLCViewController.m */,
+				C326BAD61AE04F69001DCD31 /* BLCMainMenuViewController.h */,
+				C326BAD71AE04F69001DCD31 /* BLCMainMenuViewController.m */,
 				C33A96701ADDCA5B006CD105 /* BLCWhiskeyViewController.h */,
 				C33A96711ADDCA5B006CD105 /* BLCWhiskeyViewController.m */,
 				C3F9EA491AAE8F4F0072ACEC /* Images.xcassets */,
@@ -221,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3F9EA451AAE8F4F0072ACEC /* BLCViewController.m in Sources */,
+				C326BAD81AE04F69001DCD31 /* BLCMainMenuViewController.m in Sources */,
 				C33A96721ADDCA5B006CD105 /* BLCWhiskeyViewController.m in Sources */,
 				C3F9EA421AAE8F4F0072ACEC /* BLCAppDelegate.m in Sources */,
 				C3F9EA3F1AAE8F4F0072ACEC /* main.m in Sources */,

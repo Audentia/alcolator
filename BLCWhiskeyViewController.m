@@ -14,14 +14,22 @@
 
 @implementation BLCWhiskeyViewController
 
--(void)buttonPressed:(UIButton *)sender
-{
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    self.title = NSLocalizedString(@"Whiskey", @"whiskey");
+}
+
+- (void)sliderValueDidChange:(UISlider *)sender {
     [self.beerPercentTextField resignFirstResponder];
     [self calculateWhiskey];
 }
 
--(void)calculateWhiskey
-{
+-(void)buttonPressed:(UIButton *)sender {
+    [self.beerPercentTextField resignFirstResponder];
+    [self calculateWhiskey];
+}
+
+-(void)calculateWhiskey {
     //first calculate how much alcohol is in all those beers...
     
     int numberOfBeers = self.beerCountSlider.value;

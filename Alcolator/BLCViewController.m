@@ -48,6 +48,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"Wine", @"wine");
+
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
     self.beerPercentTextField.backgroundColor = [UIColor lightGrayColor];
@@ -70,6 +72,7 @@
     [self.hideKeyboardTapGestureRecognizer addTarget:self action:@selector(tapGestureDidFire:)];
     
     self.resultLabel.numberOfLines = 0;
+    
 }
 
 
@@ -83,7 +86,7 @@
     CGFloat itemHeight = [[UIScreen mainScreen] bounds].size.height / 20;
     
 
-    self.beerPercentTextField.frame = CGRectMake(padding, padding, itemWidth, itemHeight);
+    self.beerPercentTextField.frame = CGRectMake(padding, padding * 4, itemWidth, itemHeight);
     
     CGFloat bottomOfTextField = CGRectGetMaxY(self.beerPercentTextField.frame);
     
