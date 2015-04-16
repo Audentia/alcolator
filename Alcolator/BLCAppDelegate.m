@@ -1,22 +1,28 @@
 //
-//  AppDelegate.m
+//  BLCAppDelegate.m
 //  Alcolator
 //
 //  Created by Douglas Hewitt on 3/9/15.
 //  Copyright (c) 2015 Douglas Hewitt. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "BLCAppDelegate.h"
+#import "BLCViewController.h"
 
-@interface AppDelegate ()
+@interface BLCAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation BLCAppDelegate
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    BLCViewController *viewController = [[BLCViewController alloc] init];
+    self.window.rootViewController = viewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

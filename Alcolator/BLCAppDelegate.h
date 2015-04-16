@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  BLCAppDelegate.h
 //  Alcolator
 //
 //  Created by Douglas Hewitt on 3/9/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface BLCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
