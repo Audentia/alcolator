@@ -15,6 +15,7 @@
 @property (weak, nonatomic) UILabel *resultLabel;
 @property (weak, nonatomic) UILabel *beerNumberLabel;
 
+
 -(void)buttonPressed: (UIButton *)sender;
 -(void)calculateWine;
 

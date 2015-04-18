@@ -14,14 +14,39 @@
 
 @implementation BLCWhiskeyViewController
 
+- (instancetype) init {
+    self = [super init];
+    if (self) {
+        self.title = NSLocalizedString(@"Whiskey", nil);
+    }
+    return self;
+}
+
 - (void) viewDidLoad {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"Whiskey", @"whiskey");
+    self.view.backgroundColor = [UIColor colorWithRed:0.992 green:0.992 blue:0.588 alpha:1];
 }
 
 - (void)sliderValueDidChange:(UISlider *)sender {
-    [self.beerPercentTextField resignFirstResponder];
+    NSLog(@"Slider value changed to %f", sender.value);
+    int slideValue = (int) sender.value;
+    NSInteger numBeers = slideValue;
+    
+    NSString *beerText;
+    if (numBeers == 1) {
+        beerText = NSLocalizedString(@"Beer", @"singular beer");
+    } else {
+        beerText = NSLocalizedString(@"Beers", @"plural of beer");
+    }
+    
+    NSString *stringBeers = [NSString stringWithFormat:@"%ld %@", (long)numBeers, beerText];
+    self.beerNumberLabel.text = stringBeers;
+    
     [self calculateWhiskey];
+    
+    [self.beerPercentTextField resignFirstResponder];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
+
 }
 
 -(void)buttonPressed:(UIButton *)sender {

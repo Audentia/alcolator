@@ -8,9 +8,9 @@
 
 #import "BLCAppDelegate.h"
 #import "BLCViewController.h"
-#import "BLCMainMenuViewController.h"
+#import "BLCWhiskeyViewController.h"
 
-@interface BLCAppDelegate ()
+@interface BLCAppDelegate () <UITabBarControllerDelegate>
 
 @end
 
@@ -21,12 +21,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    BLCMainMenuViewController *mainMenuViewController = [[BLCMainMenuViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
-    self.window.rootViewController = navigationController;
+
+    BLCViewController *wineVC = [[BLCViewController alloc] init];
+    BLCWhiskeyViewController *whiskeyVC = [[BLCWhiskeyViewController alloc] init];
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.viewControllers = @[wineVC, whiskeyVC];
+    
+    tabBarVC.delegate = self;
+    
+    self.window.rootViewController = tabBarVC;
     [self.window makeKeyAndVisible];
+
     return YES;
 }
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    NSLog(@"New view controller selected: %@", viewController);
+
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
